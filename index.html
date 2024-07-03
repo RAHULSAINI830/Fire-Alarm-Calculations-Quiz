@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Alarm Calculations Quiz</title>
+    <style>
+       
+
+        .quiz-container {
+            max-width: 900px;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #343a40;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        h4{
+            text-align: center;
+            color: #6c757d;
+            margin-bottom: 30px;
+        }
+        
+
+        p {
+            text-align: left;
+            color: #6c757d;
+            margin-bottom: 30px;
+        }
+
+        .question {
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .question p {
+            font-size: 20px;
+            margin: 0 0 15px;
+            color: #495057;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-size: 18px;
+            cursor: pointer;
+            color: #495057;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 20px;
+            color: white;
+            background-color: #ee5566;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        
+
+        #result {
+            margin-top: 20px;
+            font-size: 22px;
+            text-align: center;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+
+        .incorrect {
+            color: red;
+            font-weight: bold;
+        }
+
+        .disabled label {
+            cursor: not-allowed;
+        }
+
+        .disabled input[type="radio"] {
+            cursor: not-allowed;
+        }
+
+        .question-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+
+        @media (max-width: 768px) {
+            .quiz-container {
+                padding: 20px;
+            }
+
+            .question p {
+                font-size: 18px;
+            }
+
+            label {
+                font-size: 16px;
+            }
+
+            button {
+                padding: 12px;
+                font-size: 18px;
+            }
+
+            #result {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quiz-container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .question p {
+                font-size: 16px;
+            }
+
+            label {
+                font-size: 14px;
+            }
+
+            button {
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            #result {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Exercise Your Knowledge of Fire Alarm Calculations</h1>
+        <h4>All Answers relate to NFPA 101, 2018 Edition</h4>
+        <form id="quiz-form">
+            <div class="question-container">
+                <!-- Question 1 -->
+                <div class="question">
+                    <p>1. The table indicates this is a remote station system. What would be the required standby and alarm time?</p>
+                    <label><input type="radio" name="q1" value="A"> 24 hours and 5 minutes</label>
+                    <label><input type="radio" name="q1" value="B"> 60 hours and 4 minutes</label>
+                    <label><input type="radio" name="q1" value="C"> 24 hours and 15 minutes</label>
+                    <label><input type="radio" name="q1" value="D"> 24 hours and 4 minutes</label>
+                </div>
+                <!-- Question 2 -->
+                <div class="question">
+                    <p>2. If the system type indicated was a household system, what would be the required standby and alarm time?</p>
+                    <label><input type="radio" name="q2" value="A"> 24 hours and 5 minutes</label>
+                    <label><input type="radio" name="q2" value="B"> 60 hours and 4 minutes</label>
+                    <label><input type="radio" name="q2" value="C"> 24 hours and 15 minutes</label>
+                    <label><input type="radio" name="q2" value="D"> 24 hours and 4 minutes</label>
+                </div>
+                <!-- Question 3 -->
+                <div class="question">
+                    <p>3. The alarm panel manufacturer states that the maximum output current during an alarm is 400 milliamps. Would the power necessary during an alarm be sufficient or would it cause an overload?</p>
+                    <label><input type="radio" name="q3" value="A"> Sufficient because the standby and combined alarm current is less than 400 milliamps.</label>
+                    <label><input type="radio" name="q3" value="B"> Insufficient because the alarm current exceeds 400 milliamps.</label>
+                    <label><input type="radio" name="q3" value="C"> Sufficient because the alarm time is only 4 minutes and the panel is using a 7 amp hour battery.</label>
+                    <label><input type="radio" name="q3" value="D"> Not enough information has been provided.</label>
+                </div>
+                <!-- Question 4 -->
+                <div class="question">
+                    <p>4. A combination household fire and burglar alarm system requires no battery calculations because the manufacturer has already set out the appropriate parameters.</p>
+                    <label><input type="radio" name="q4" value="A"> True</label>
+                    <label><input type="radio" name="q4" value="B"> False</label>
+                </div>
+                <!-- Question 5 -->
+                <div class="question">
+                    <p>5. For a household fire and carbon monoxide alarm system, the secondary standby power shall be capable of operating the system for at least _____________.</p>
+                    <label><input type="radio" name="q5" value="A"> 24 hours in the normal condition, followed by 5 minutes of fire alarm and 12 hours of carbon monoxide alarm</label>
+                    <label><input type="radio" name="q5" value="B"> 24 hours in the normal condition, followed by 4 minutes of fire alarm or 4 hours of carbon monoxide alarm</label>
+                    <label><input type="radio" name="q5" value="C"> 12 hours in the normal condition, followed by 15 minutes of fire alarm or 1 hour of carbon monoxide alarm</label>
+                    <label><input type="radio" name="q5" value="D"> 24 hours in the normal condition, followed by 4 minutes of fire alarm or 12 hours of carbon monoxide alarm</label>
+                </div>
+                <!-- Question 6 -->
+                <div class="question">
+                    <p>6. The required standby capacity (AMP-Hours) required is ________.</p>
+                    <label><input type="radio" name="q6" value="A"> 6.7</label>
+                    <label><input type="radio" name="q6" value="B"> 13.75</label>
+                    <label><input type="radio" name="q6" value="C"> 4</label>
+                    <label><input type="radio" name="q6" value="D"> 11.10</label>
+                </div>
+                <!-- Question 7 -->
+                <div class="question">
+                    <p>7. The required standby battery that must be installed is __________ amp hours.</p>
+                    <label><input type="radio" name="q7" value="A"> 4</label>
+                    <label><input type="radio" name="q7" value="B"> 7</label>
+                    <label><input type="radio" name="q7" value="C"> 12</label>
+                    <label><input type="radio" name="q7" value="D"> 17</label>
+                    <label><input type="radio" name="q7" value="E"> 35</label>
+                </div>
+                <!-- Question 8 -->
+                <div class="question">
+                    <p>8. A rechargeable battery used as the secondary power source shall be recharged within ___________ hours.</p>
+                    <label><input type="radio" name="q8" value="A"> 4</label>
+                    <label><input type="radio" name="q8" value="B"> 12</label>
+                    <label><input type="radio" name="q8" value="C"> 24</label>
+                    <label><input type="radio" name="q8" value="D"> 48</label>
+                </div>
+                <!-- Question 9 -->
+                <div class="question">
+                    <p>9. For a remote system, the required alarm time is 5 minutes, which converts to __________ hours.</p>
+                    <label><input type="radio" name="q9" value="A"> 0.067</label>
+                    <label><input type="radio" name="q9" value="B"> 0.083</label>
+                    <label><input type="radio" name="q9" value="C"> 0.167</label>
+                    <label><input type="radio" name="q9" value="D"> 0.250</label>
+                </div>
+                <!-- Question 10 -->
+                <div class="question">
+                    <p>10. The total alarm current draw (B) is __________.</p>
+                    <label><input type="radio" name="q10" value="A"> 0.635 amps</label>
+                    <label><input type="radio" name="q10" value="B"> 0.889 amps</label>
+                    <label><input type="radio" name="q10" value="C"> 1.3 amps</label>
+                    <label><input type="radio" name="q10" value="D"> 340 milliamps</label>
+                </div>
+            </div>
+            <button type="button" onclick="submitQuiz()">Submit</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script>
+        const correctAnswers = {
+            q1: 'A',
+            q2: 'D',
+            q3: 'B',
+            q4: 'B',
+            q5: 'A',
+            q6: 'D',
+            q7: 'C',
+            q8: 'B',
+            q9: 'A',
+            q10: 'B'
+        };
+
+        function submitQuiz() {
+            let score = 0;
+            const totalQuestions = 10;
+            const form = document.getElementById('quiz-form');
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '';
+
+            form.classList.add('disabled');
+
+            for (const [question, correctAnswer] of Object.entries(correctAnswers)) {
+                const userAnswer = form.elements[question].value;
+                const questionDiv = form.querySelector(`input[name=${question}]`).closest('.question');
+
+                if (userAnswer === correctAnswer) {
+                    score++;
+                    questionDiv.querySelector(`input[value=${correctAnswer}]`).parentElement.classList.add('correct');
+                } else {
+                    if (userAnswer) {
+                        questionDiv.querySelector(`input[value=${userAnswer}]`).parentElement.classList.add('incorrect');
+                    }
+                }
+
+                // Disable all radio buttons
+                const radios = questionDiv.querySelectorAll('input[type="radio"]');
+                radios.forEach(radio => {
+                    radio.disabled = true;
+                });
+            }
+
+            resultDiv.innerHTML = `Thank you! Your score is ${score}/${totalQuestions}`;
+        }
+    </script>
+</body>
+</html>
