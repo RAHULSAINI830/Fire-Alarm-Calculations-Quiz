@@ -17,6 +17,7 @@
             height: 100vh;
         }
         .quiz-container {
+            margin-top: 1000px;
             max-width: 900px;
             width: 100%;
             background-color: #ffffff;
@@ -113,7 +114,7 @@
             cursor: not-allowed;
         }
 
-        .question-container {
+        .unique-question-container {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -174,87 +175,122 @@
 <body>
     <div class="quiz-container">
         <h1>Exercise Your Knowledge of Fire Alarm Calculations</h1>
-        <h4>All Answers relate to NFPA 101, 2018 Edition</h4>
         <form id="quiz-form">
-            <div class="question-container">
+            <div class="unique-question-container">
                 <!-- Question 1 -->
                 <div class="question">
-                    <p>1. The table indicates this is a remote station system. What would be the required standby and alarm time?</p>
-                    <label><input type="radio" name="q1" value="A"> 24 hours and 5 minutes</label>
-                    <label><input type="radio" name="q1" value="B"> 60 hours and 4 minutes</label>
-                    <label><input type="radio" name="q1" value="C"> 24 hours and 15 minutes</label>
-                    <label><input type="radio" name="q1" value="D"> 24 hours and 4 minutes</label>
+                    <p>1. What is the primary purpose of a fire extinguisher?</p>
+                    <label><input type="radio" name="q1" value="A"> To cool down the area</label>
+                    <label><input type="radio" name="q1" value="B"> To extinguish or control small fires</label>
+                    <label><input type="radio" name="q1" value="C"> To alert people of a fire</label>
+                    <label><input type="radio" name="q1" value="D"> To provide oxygen </label>
                 </div>
                 <!-- Question 2 -->
                 <div class="question">
-                    <p>2. If the system type indicated was a household system, what would be the required standby and alarm time?</p>
-                    <label><input type="radio" name="q2" value="A"> 24 hours and 5 minutes</label>
-                    <label><input type="radio" name="q2" value="B"> 60 hours and 4 minutes</label>
-                    <label><input type="radio" name="q2" value="C"> 24 hours and 15 minutes</label>
-                    <label><input type="radio" name="q2" value="D"> 24 hours and 4 minutes</label>
+                    <p>2. What color is a standard fire alarm pull station?</p>
+                    <label><input type="radio" name="q2" value="A"> Blue</label>
+                    <label><input type="radio" name="q2" value="B"> Red</label>
+                    <label><input type="radio" name="q2" value="C"> Green</label>
+                    <label><input type="radio" name="q2" value="D"> Yellow</label>
                 </div>
                 <!-- Question 3 -->
                 <div class="question">
-                    <p>3. The alarm panel manufacturer states that the maximum output current during an alarm is 400 milliamps. Would the power necessary during an alarm be sufficient or would it cause an overload?</p>
-                    <label><input type="radio" name="q3" value="A"> Sufficient because the standby and combined alarm current is less than 400 milliamps.</label>
-                    <label><input type="radio" name="q3" value="B"> Insufficient because the alarm current exceeds 400 milliamps.</label>
-                    <label><input type="radio" name="q3" value="C"> Sufficient because the alarm time is only 4 minutes and the panel is using a 7 amp hour battery.</label>
-                    <label><input type="radio" name="q3" value="D"> Not enough information has been provided.</label>
+                    <p>3. Which class of fire involves ordinary combustibles like wood and paper?</p>
+                    <label><input type="radio" name="q3" value="A"> Class A</label>
+                    <label><input type="radio" name="q3" value="B"> Class B</label>
+                    <label><input type="radio" name="q3" value="C"> Class C</label>
+                    <label><input type="radio" name="q3" value="D"> Class D</label>
                 </div>
                 <!-- Question 4 -->
                 <div class="question">
-                    <p>4. A combination household fire and burglar alarm system requires no battery calculations because the manufacturer has already set out the appropriate parameters.</p>
-                    <label><input type="radio" name="q4" value="A"> True</label>
-                    <label><input type="radio" name="q4" value="B"> False</label>
+                    <p>4. What is the recommended frequency for testing smoke alarms?</p>
+                    <label><input type="radio" name="q4" value="A"> Monthly</label>
+                    <label><input type="radio" name="q4" value="B"> Quarterly</label>
+                    <label><input type="radio" name="q3" value="C"> Annually</label>
+                    <label><input type="radio" name="q3" value="D"> Biannually</label>
                 </div>
                 <!-- Question 5 -->
                 <div class="question">
-                    <p>5. For a household fire and carbon monoxide alarm system, the secondary standby power shall be capable of operating the system for at least _____________.</p>
-                    <label><input type="radio" name="q5" value="A"> 24 hours in the normal condition, followed by 5 minutes of fire alarm and 12 hours of carbon monoxide alarm</label>
-                    <label><input type="radio" name="q5" value="B"> 24 hours in the normal condition, followed by 4 minutes of fire alarm or 4 hours of carbon monoxide alarm</label>
-                    <label><input type="radio" name="q5" value="C"> 12 hours in the normal condition, followed by 15 minutes of fire alarm or 1 hour of carbon monoxide alarm</label>
-                    <label><input type="radio" name="q5" value="D"> 24 hours in the normal condition, followed by 4 minutes of fire alarm or 12 hours of carbon monoxide alarm</label>
+                    <p>5. What should you do if you smell gas in a building?</p>
+                    <label><input type="radio" name="q5" value="A"> Turn off the lights</label>
+                    <label><input type="radio" name="q5" value="B"> Light a match to find the leak</label>
+                    <label><input type="radio" name="q5" value="C"> Evacuate the building and call emergency services</label>
+                    <label><input type="radio" name="q5" value="D"> Open all windows</label>
                 </div>
                 <!-- Question 6 -->
                 <div class="question">
-                    <p>6. The required standby capacity (AMP-Hours) required is ________.</p>
-                    <label><input type="radio" name="q6" value="A"> 6.7</label>
-                    <label><input type="radio" name="q6" value="B"> 13.75</label>
-                    <label><input type="radio" name="q6" value="C"> 4</label>
-                    <label><input type="radio" name="q6" value="D"> 11.10</label>
+                    <p>6. Which of the following fire extinguishers should be used on an electrical fire?</p>
+                    <label><input type="radio" name="q6" value="A"> Water extinguisher</label>
+                    <label><input type="radio" name="q6" value="B"> Foam extinguisher</label>
+                    <label><input type="radio" name="q6" value="C"> Dry powder extinguisher</label>
+                    <label><input type="radio" name="q6" value="D"> CO2 extinguisher</label>
                 </div>
                 <!-- Question 7 -->
                 <div class="question">
-                    <p>7. The required standby battery that must be installed is __________ amp hours.</p>
-                    <label><input type="radio" name="q7" value="A"> 4</label>
-                    <label><input type="radio" name="q7" value="B"> 7</label>
-                    <label><input type="radio" name="q7" value="C"> 12</label>
-                    <label><input type="radio" name="q7" value="D"> 17</label>
-                    <label><input type="radio" name="q7" value="E"> 35</label>
+                    <p>7. What is a fire door's primary function?</p>
+                    <label><input type="radio" name="q7" value="A"> To provide a quick exit</label>
+                    <label><input type="radio" name="q7" value="B"> To stop the spread of fire and smoke</label>
+                    <label><input type="radio" name="q7" value="C"> To ventilate a room</label>
+                    <label><input type="radio" name="q7" value="D"> To act as a regular door</label>
                 </div>
                 <!-- Question 8 -->
                 <div class="question">
-                    <p>8. A rechargeable battery used as the secondary power source shall be recharged within ___________ hours.</p>
-                    <label><input type="radio" name="q8" value="A"> 4</label>
-                    <label><input type="radio" name="q8" value="B"> 12</label>
-                    <label><input type="radio" name="q8" value="C"> 24</label>
-                    <label><input type="radio" name="q8" value="D"> 48</label>
+                    <p>8. What does the acronym PASS stand for in the context of using a fire extinguisher?</p>
+                    <label><input type="radio" name="q8" value="A"> Pull, Aim, Squeeze, Sweep</label>
+                    <label><input type="radio" name="q8" value="B"> Push, Alert, Scream, Shout</label>
+                    <label><input type="radio" name="q8" value="C"> Pull, Alert, Squeeze, Sweep</label>
+                    <label><input type="radio" name="q8" value="D"> Push, Aim, Scream, Sweep</label>
                 </div>
                 <!-- Question 9 -->
                 <div class="question">
-                    <p>9. For a remote system, the required alarm time is 5 minutes, which converts to __________ hours.</p>
-                    <label><input type="radio" name="q9" value="A"> 0.067</label>
-                    <label><input type="radio" name="q9" value="B"> 0.083</label>
-                    <label><input type="radio" name="q9" value="C"> 0.167</label>
-                    <label><input type="radio" name="q9" value="D"> 0.250</label>
+                    <p>9. What type of fire alarm system uses a network of devices to detect and alert to the presence of fire?</p>
+                    <label><input type="radio" name="q9" value="A"> Manual system</label>
+                    <label><input type="radio" name="q9" value="B"> Conventional system</label>
+                    <label><input type="radio" name="q9" value="C">  Addressable system</label>
+                    <label><input type="radio" name="q9" value="D"> Hybrid system</label>
                 </div>
                 <!-- Question 10 -->
                 <div class="question">
-                    <p>10. The total alarm current draw (B) is __________.</p>
-                    <label><input type="radio" name="q10" value="A"> 0.635 amps</label>
-                    <label><input type="radio" name="q10" value="B"> 0.889 amps</label>
-                    <label><input type="radio" name="q10" value="C"> 1.3 amps</label>
-                    <label><input type="radio" name="q10" value="D"> 340 milliamps</label>
+                    <p>10. What is the minimum width for an escape route in a commercial building?</p>
+                    <label><input type="radio" name="q10" value="A"> 24 inches</label>
+                    <label><input type="radio" name="q10" value="B"> 32 inches</label>
+                    <label><input type="radio" name="q10" value="C"> 36 inches</label>
+                    <label><input type="radio" name="q10" value="D">  42 inches</label>
+                </div>
+                <div class="question">
+                    <p>11. What is the maximum allowable travel distance to a fire extinguisher in a commercial building?</p>
+                    <label><input type="radio" name="q11" value="A"> 50 feet</label>
+                    <label><input type="radio" name="q11" value="B"> 75 feet</label>
+                    <label><input type="radio" name="q11" value="C"> 100 feet</label>
+                    <label><input type="radio" name="q11" value="D">  150 feet</label>
+                </div>
+                <div class="question">
+                    <p>12. According to NFPA 25, how often should a dry pipe sprinkler system be inspected?</p>
+                    <label><input type="radio" name="q12" value="A">Monthly</label>
+                    <label><input type="radio" name="q12" value="B"> Quarterly</label>
+                    <label><input type="radio" name="q12" value="C"> Annually</label>
+                    <label><input type="radio" name="q12" value="D">  Every 5 years</label>
+                </div>
+                <div class="question">
+                    <p>13. In a multi-story building, where should smoke detectors be installed?</p>
+                    <label><input type="radio" name="q13" value="A">  Only in the basement</label>
+                    <label><input type="radio" name="q13" value="B">  On every floor, including basements and attics</label>
+                    <label><input type="radio" name="q13" value="C"> Only on the main floor</label>
+                    <label><input type="radio" name="q13" value="D">  Only in bedrooms</label>
+                </div>
+                <div class="question">
+                    <p>14. What is the required fire resistance rating for doors in a one-hour fire-rated wall?</p>
+                    <label><input type="radio" name="q14" value="A"> 20 minutes</label>
+                    <label><input type="radio" name="q14" value="B"> 45 minutes</label>
+                    <label><input type="radio" name="q14" value="C"> 60 minutes</label>
+                    <label><input type="radio" name="q14" value="D"> 90 minutes</label>
+                </div>
+                <div class="question">
+                    <p>15. What is the main purpose of a fire damper in an HVAC system?</p>
+                    <label><input type="radio" name="q15" value="A"> To regulate air flow</label>
+                    <label><input type="radio" name="q15" value="B"> To enhance air quality</label>
+                    <label><input type="radio" name="q15" value="C">  To prevent the spread of fire and smoke through ductwork</label>
+                    <label><input type="radio" name="q15" value="D">  To provide heating and cooling</label>
                 </div>
             </div>
             <button type="button" onclick="submitQuiz()">Submit</button>
@@ -263,21 +299,26 @@
     </div>
     <script>
         const correctAnswers = {
-            q1: 'A',
-            q2: 'D',
-            q3: 'B',
-            q4: 'B',
-            q5: 'A',
+            q1: 'B',
+            q2: 'B',
+            q3: 'A',
+            q4: 'A',
+            q5: 'C',
             q6: 'D',
-            q7: 'C',
-            q8: 'B',
-            q9: 'A',
-            q10: 'B'
+            q7: 'B',
+            q8: 'A',
+            q9: 'C',
+            q10: 'C',
+            q11: 'B',
+            q12: 'B',
+            q13: 'B',
+            q14: 'B',
+            q15: 'C',
         };
 
         function submitQuiz() {
             let score = 0;
-            const totalQuestions = 10;
+            const totalQuestions = 15;
             const form = document.getElementById('quiz-form');
             const resultDiv = document.getElementById('result');
             resultDiv.innerHTML = '';
